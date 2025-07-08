@@ -24,17 +24,17 @@
         <ul>
     </div>
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const user = document.getElementById('username').value;
-            const pass = document.getElementById('password').value;
-            const message = document.getElementById('loginMessage');
-            if(user === 'enrique' && pass === '12345') {
-                message.textContent = 'Bienvenido, admin!';
-                message.style.color = 'green';
+        document.getElementById('loginForm').addEventListener('submit function(event) {
+            event.preventDefault(),
+            const user = document.getElementById('username').value
+            const pass = document.getElementById('password').value
+            const message = document.getElementById('loginMessage')
+            if(user === 'enrique' && pass === '123') {
+                message.textContent = 'Bienvenido, admin!'
+                message.style.color = 'green'
             } else {
-                message.textContent = 'Usuario o contraseña incorrectos';
-                message.style.color = 'red';
+                message.textContent = 'Usuario o contraseña incorrectos'
+                message.style.color = 'red'
             }
         });
     </script>
