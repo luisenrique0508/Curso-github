@@ -8,6 +8,14 @@
 <body>
     <h1 class="h1">Hello World</h1>
     <div class="div">
+        <!-- Formulario de Login -->
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+        <p id="loginMessage"></p>
+        <!-- Fin Formulario de Login -->
         <p>This is a paragraph</p>
         <a href="https://www.google.com">Google</a>
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
@@ -15,6 +23,20 @@
         <input type="text" placeholder="Enter your name">
         <ul>
     </div>
-   
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            const message = document.getElementById('loginMessage');
+            if(user === 'enrique' && pass === '12345') {
+                message.textContent = 'Bienvenido, admin!';
+                message.style.color = 'green';
+            } else {
+                message.textContent = 'Usuario o contraseña incorrectos';
+                message.style.color = 'red';
+            }
+        });
+    </script>
 </body>
 </html>
